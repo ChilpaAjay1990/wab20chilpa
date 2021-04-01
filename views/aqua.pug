@@ -23,7 +23,12 @@ block content
                         "cost": 3
                     },                   
                 ]
-            each k in aqua
-                div(class="col-sm-2") #{k.name}
-                div(class="col-sm-2") #{k.type}
-                div(class="col-sm-2") #{k.cost}
+            each k,index in aqua
+                div(class="col-sm-2" onclick=`buy(${index})`) #{k.name}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{k.type}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{k.cost}
+  script.                
+        function buy(intemNo)
+        {
+              alert(`you purchased Item ${intemNo+1}`)
+        }            
