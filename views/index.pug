@@ -2,9 +2,10 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title} JS
+  p Welcome to #{title} 
   button(type="button", class="btn btn-primary",onclick="update()") Press Me
-  div(id = "target") text of display
+  div(id = "target") text of Display
+  a(href='/aqua') link to aqua
   script.  
    var client_count=0;
      function update() {
